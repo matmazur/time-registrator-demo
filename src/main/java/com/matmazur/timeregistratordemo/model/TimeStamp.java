@@ -15,7 +15,7 @@ public class TimeStamp {
     private String surname;
     private LocalTime time;
 
-    public TimeStamp(String name, String surname, LocalTime time) {
+    private TimeStamp(String name, String surname, LocalTime time) {
         this.name = name;
         this.surname = surname;
         this.time = time;
