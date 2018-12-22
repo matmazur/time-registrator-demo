@@ -11,12 +11,14 @@
 
 <h1>Time registrator</h1>
 <form th:action="@{/add}" th:method="post" th:object="${formTimeStamp}">
-    <p>First name : <input type="text" th:field="*{name}"></p>
-    <p>Last name : <input type="text" th:field="*{surname}"></p>
+
+    <p><label>First name:<input type="text" th:field="*{name}"></label></p>
+    <p><label>Last name:<input type="text" th:field="*{surname}"></label></p>
     <p>
-        Hour:<input type="number" name="hour">
-        Min:<input type="number" name="minute">
-        Sec:<input type="number" name="second"></p>
+        <label>Hour:<input type="number" name="hour" min="0" max="24"></label>
+        <label>Min:<input type="number" name="minute" min="0" max="59"></label>
+        <label> Sec: <input type="number" name="second" min="0" max="59"></label>
+    </p>
     <p><input type="submit" value="add"></p>
 </form>
 <p><a th:href="@{/allTimes}">All times</a></p>
