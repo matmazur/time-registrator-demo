@@ -35,11 +35,14 @@ public class IndexController {
             @ModelAttribute TimeStamp formTimeStamp,
             @RequestParam int hour,
             @RequestParam int minute,
-            @RequestParam int second
+            @RequestParam int second,
+            ModelMap modelMap
     ) {
         LocalTime time = LocalTime.of(hour, minute, second);
         formTimeStamp.setTime(time);
 
+
+        modelMap.put("formTimeStamp", formTimeStamp);
         timeStampRepository.save(formTimeStamp);
         return "index";
     }

@@ -9,7 +9,23 @@
 </head>
 <body>
 
+<h1>All times:</h1>
 
+<div th:unless="${stamps} and ${stamps.isEmpty()}">
+    <table border="1">
+        <th>Name</th>
+        <th>Surname</th>
+        <th>Time</th>
+        <tr th:each="stamp : ${stamps}" th:object="${stamp}">
+            <td th:text="*{name}">stuff</td>
+            <td th:text="*{surname}">stuff</td>
+            <td th:text="*{time}">stuff</td>
+        </tr>
+    </table>
+
+</div>
+<br>
+<a th:href="@{/}">Go back</a>
 
 </body>
 </html>

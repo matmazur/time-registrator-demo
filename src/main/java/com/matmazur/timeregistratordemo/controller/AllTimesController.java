@@ -20,11 +20,13 @@ public class AllTimesController {
         this.timeStampRepository = timeStampRepository;
     }
 
-    @GetMapping
+    @GetMapping("/allTimes")
     public String allTimes(ModelMap modelMap) {
 
         List<TimeStamp> stamps = timeStampRepository.findAll();
         modelMap.put("stamps", stamps);
+        System.out.println(stamps.isEmpty());
+        System.out.println(stamps);
 
         return "allTimes";
     }
