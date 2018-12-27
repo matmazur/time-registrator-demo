@@ -7,7 +7,7 @@ import javax.annotation.PostConstruct;
 import java.util.TimeZone;
 
 @SpringBootApplication
-public class TimeRegistratorDemoApplication {
+public class TimeRegisterDemoApplication {
 
     @PostConstruct
     void started() {
@@ -15,7 +15,7 @@ public class TimeRegistratorDemoApplication {
     }
 
     public static void main(String[] args) {
-        SpringApplication.run(TimeRegistratorDemoApplication.class, args);
+        SpringApplication.run(TimeRegisterDemoApplication.class, args);
     }
 }
 

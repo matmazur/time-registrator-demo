@@ -5,11 +5,11 @@
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Time registrator</title>
+    <title>Time register</title>
 </head>
 <body>
 
-<h1>Time registrator</h1>
+<h1>Time register</h1>
 <form th:action="@{/add}" th:method="post" th:object="${formTimeStamp}">
 
     <p><label>First name:<input type="text" th:field="*{name}"></label></p>
@@ -17,7 +17,7 @@
     <p>
         <label>Hour:<input type="number" name="hour" min="0" max="24"></label>
         <label>Min:<input type="number" name="minute" min="0" max="59"></label>
-        <label> Sec: <input type="number" name="second" min="0" max="59"></label>
+        <label>Sec:<input type="number" name="second" min="0" max="59"></label>
     </p>
     <p><input type="submit" value="add"></p>
 </form>
